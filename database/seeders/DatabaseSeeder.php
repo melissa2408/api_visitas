@@ -17,5 +17,9 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             RoleSeeder::class
         ]);
+
+        \App\Models\User::factory(10)->create();
+
+        $this->call(PostSeeder::class);
     }
 }
