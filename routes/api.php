@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\VisitController;
+
 use App\Http\Controllers\Api\UserController;
 
 
@@ -37,3 +39,5 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 });
 
 Route::apiResource('posts', PostController::class);
+Route::apiResource('visits', VisitController::class);
+
